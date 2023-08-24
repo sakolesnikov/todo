@@ -34,8 +34,9 @@ technical aspects required to fulfill the functionalities defined in the API mod
 
 ### Prerequisites
 
-Before running the TODO API, make sure you have the following installed:
+Before running the TODO API, make sure you have the following:
 
+- GitHub Account is required for OAuth2 authentication
 - OpenJDK 20
 - Docker (for optional containerization)
 
