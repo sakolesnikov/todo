@@ -7,7 +7,6 @@ The TODO API is a service that allows you to manage your TODO list. It provides 
 - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Running the Project Locally](#running-the-project-locally)
-- [Running Tests](#running-tests)
 - [Building and Deploying Docker Image](#building-and-deploying-docker-image)
 - [API Endpoints](#api-endpoints)
     - [Create a TODO Item](#create-a-todo-item)
