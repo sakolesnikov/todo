@@ -1,0 +1,39 @@
+server:
+  port: ${SERVER_PORT:8080}
+  host: ${SERVER_HOST:localhost}
+  protocol: ${SERVER_PROTOCOL:http://}
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: ${CLIENT_ID}
+            clientSecret: ${CLIENT_SECRET}
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+logging:
+  level:
+    root: INFO
+    org.springframework.jdbc.core: ${LOG_SQL:OFF}
+
+springdoc:
+  swagger-ui:
+    oauth:
+      clientId: ${CLIENT_ID}
+      clientSecret: ${CLIENT_SECRET}
+    display-operation-id: true
+    oauth2-redirect-url: /login/oauth2/code/github
+  oAuthFlow:
+    authorizationUrl: https://github.com/login/oauth/authorize
+    tokenUrl: https://github.com/login/oauth/access_token
+
+app:
+  trace: ${APP_TRACE:true}
